@@ -1,0 +1,8 @@
+pytest
+selenium
+allure-pytest
+delayed-assert
+pytest-rerunfailures
+pytest-variables
+pytest-xdist
+assertlib
