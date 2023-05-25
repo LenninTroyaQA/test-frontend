@@ -13,11 +13,11 @@ class TestHomepage:
 
         delayed_assert.assert_expectations()
 
-    @allure.title("Verify that the expected headline text is found")
+    @allure.title("Verify that user landed on expected URL")
     def test_homepage_002_verify_current_url(self):
         Factory.driver.driver.get(Factory.base.production_url)
         Factory.homepage_screen.sample_page_header_menu_link().click()
-        Factory.test_utils.verify_expected_text(Factory.driver.driver.current_url,
+        Factory.test_utils.verify_current_url(Factory.driver.driver.current_url,
                                                 f"{Factory.base.production_url}sample-page/")
 
         delayed_assert.assert_expectations()
